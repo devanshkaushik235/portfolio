@@ -1,0 +1,30 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: sans-serif;
+    /* Prevent scrollbars from showing up when new lights are added */
+    overflow: hidden; 
+}
+
+/* Style for the "light" element created by JavaScript */
+.light-ripple {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white; /* Or any color you like */
+    border-radius: 50%;
+    animation: growAndFade 1.5s ease-out forwards;
+    pointer-events: none; /* So it doesn't block clicks on other elements */
+}
+
+/* The animation that makes the light grow and fade */
+@keyframes growAndFade {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(30);
+        opacity: 0;
+    }
+}
